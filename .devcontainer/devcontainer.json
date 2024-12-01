@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/marcosgomesneto/bun-devcontainers/tree/main/src/basic-bun
+{
+  "name": "pwa-app",
+  "dockerFile": "Dockerfile",
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "oven.bun-vscode",
+        // Rustに関する拡張機能
+        "rust-lang.rust-analyzer",
+        "rust-lang.rust-pack",
+
+        // TypeScriptで開発するための拡張機能
+        "ms-vscode.vscode-typescript-next",
+        // BiomeでTypeScriptのエラーを検出するための拡張機能
+        "biomejs.biome-vscode",
+
+        // Tailwind CSSで開発するための拡張機能
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/lumenpink/devcontainer-features/bun:0": {}
+  },
+  "remoteUser": "utakata",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/workspace,type=bind"
+}
